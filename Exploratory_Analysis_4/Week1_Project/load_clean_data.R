@@ -25,3 +25,5 @@ dim(subdata)
 #check first 5 rows of the dataset
 head(subdata)
 
+#save the subset dataframe
+write.csv(subdata, file="subdata.csv")
