@@ -8,7 +8,7 @@ subdata$DateTime <- as.POSIXct(subdata$DateTime)
 with(subdata, { 
   plot(Sub_metering_1~DateTime, 
        type="l", 
-       ylab="Global Active Power (kilowatts)", 
+       ylab="Energy sub metering", 
        xlab="")
   lines(Sub_metering_2~DateTime, col="Red")
   lines(Sub_metering_3~DateTime, col="blue")
