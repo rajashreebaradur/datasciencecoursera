@@ -13,7 +13,7 @@ SCC <- readRDS("Source_Classification_Code.rds")
 #subset and aggregate emissions of Baltimore by motor vehicles
 sub2 <- subset(NEI, fips=="24510" & type=="ON-ROAD")
 
-balt_motor <- aggregate(sub2[c("Emissions")], list(year = sub2$year, type = sub2$type), sum)
+balt_motor <- aggregate(sub2[c("Emissions")], list(year = sub2$year, type = sub2$type, zip = sub2$fips), sum)
 
 qplot(year, Emissions, data = balt_motor, 
       geom= "line", 
