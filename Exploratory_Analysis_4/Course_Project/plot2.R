@@ -15,4 +15,4 @@ sub1 <- subset(NEI, fips=="24510")
 md <- tapply(sub1$Emissions, sub1$year, sum)
 
 #plotting the data
-plot(md, main = "Total PM2.5 Emissions in Baltimore County", xlab = "Year", ylab = "PM2.5 emissions", pch=19, type = 'b', lty=6, col="red")
+plot(md, x= rownames(md), main = "Total PM2.5 Emissions in Baltimore County", xlab = "Year", ylab = "PM2.5 emissions", pch=19, type = 'b', lty=6, col="red")
